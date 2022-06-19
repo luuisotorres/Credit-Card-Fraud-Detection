@@ -51,7 +51,7 @@ Lastly, F1 Score is the harmonic mean of precision and recall.This is how we cal
 <center><img src = "https://www.mydatamodels.com/wp-content/uploads/2020/10/6.-Precision-recall-1024x277.png"></center><br><br>
 
 # Conclusion 
-After using **SMOTE to oversample** our data, we had a model that wouldn't favour genuine transactions over fraudulent ones anymore and as result, we'd have the following results:<br><br>
+After using **SMOTE to oversample** our data, we had a model that wouldn't favour genuine transactions over fraudulent ones anymore and as a result, we'd have the following metrics:<br><br>
 
 85.132 True Positives.<br>
 17 False Negatives.<br>
