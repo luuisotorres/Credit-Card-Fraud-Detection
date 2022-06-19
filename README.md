@@ -58,10 +58,10 @@ After using **SMOTE to oversample** our data, we had a model that wouldn't favou
 0 False Positives.<br>
 85.440 True Negatives.<br><br>
 
-We've also achieved:
-Accuracy: 99.99%;<br><br>
-Precision: 99.98%;<br><br>
-Recall: 100%;<br><br>
+We've also achieved:<br>
+Accuracy: 99.99%;<br>
+Precision: 99.98%;<br>
+Recall: 100%;<br>
 F1 Score: 99.99%.<br><br>
 All great metrics, which indicates that our model has learned and it's now capable of identifying credit card frauds efficiently.
 
