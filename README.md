@@ -11,15 +11,15 @@
 
 Everyday **billions** of credit card transactions are made all over the world. Considering the widespread use of smartphones and the Internet throughout the earth, more and more people are using their credit cards to make purchases online, making payments through apps,etc...<br><br>
 In a scenario such as this one, it is **extremely** important that credit card companies are able to easily recognize when a transaction is a result of a fraud or a genuine purchase, avoiding that customers end up being charged for items they did not acquire.<br><br>
-In this project, I'll use the **scikit-learn** library to develop a prediction model that is able to learn and detect when a transaction is a fraud or a genuine purchase. I intend to use two classification algorithms, **Decision Tree** and **Random Forest**, to identify which one of them achieve the best results with our dataset.
+In this project, I used the **scikit-learn** library to develop a prediction model that is able to learn and detect when a transaction is a fraud or a genuine purchase. I tested four different classification algorithms, **Decision Tree**, **Random Forest**, **Ada Boost Classifier** and **Gradient Boosting** to identify which one of them would achieve the best results with our dataset.
 
 # Development
 
-In order to develop a predictive model, I used **scikit-learn** library and tested both the **Random Forest Classifier** and the **Decision Tree Classifier** to see which would achieve higher accuracy metrics for the dataset.<br><br>
+In order to develop a predictive model, I used **scikit-learn** library and tested four different classification algorithms to see which one of them would achieve higher accuracy metrics for the dataset.<br><br>
 Pandas, numpy, matplotlib, seaborn and plotly libs were also used to **explore**, **handle** and **visualize** relevant data for this projetc.<br><br>
 The dataset used for this project was the <a href= "https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud">Credit Card Fraud Detection</a> dataset posted on Kaggle, which contains credit card transactions that happened during the month of September, 2013 by european clients for two days.<br><br>
 The dataset has the feature **time**, which shows us the seconds elapsed between each transaction and the first transaction in the dataset. The feature **amount**, containing the transaction amount and the feature **class**, which tells us if that certain transaction is **genuine or a fraud, where 1 = fraud and 0 = genuine**.<br><br>
-Features V1, V2,... V28 are numerical input variables resulted of a <a href = "https://en.wikipedia.org/wiki/Principal_component_analysis">PCA transformation </a> whose content couldn't be displayed due to their **confidential** nature.<br><br>
+Features V1, V2,... V28 are numerical input variables result of a <a href = "https://en.wikipedia.org/wiki/Principal_component_analysis">PCA transformation </a> whose content couldn't be displayed due to their **confidential** nature.<br><br>
 During the development of this project, I've used certain tools from the **sklearn** library that would help me in achieving higher performance metrics for the models, such as the **StandardScaler**, used to alter the scale of **amount** variable and **SMOTE**, from **imblearn** library, used to deal with data imbalance. Both tools were used to avoid creating a model that would be biased towards a determined variable or a determined class.
 
 # Evaluation Metrics for Classification Models<br>
@@ -36,40 +36,42 @@ Beyond the confusion matrix, we also have some other relevant metrics. They are:
 
 ### Accuracy <br><br> 
 Accuracy simply tell us the propotion of correct predictions. This is how we calculate it:<br>
-<center><img src = "https://www.mydatamodels.com/wp-content/uploads/2020/10/2.-Accuracy-formula-machine-learning-algorithms.png"></center><br><br> 
+<center><img src = "https://www.mydatamodels.com/wp-content/uploads/2020/10/2.-Accuracy-formula-machine-learning-algorithms.png"></center><br>
 
 ### Precision <br><br> 
 Precision tells us how frequently our model correctly predicts positives. This is how we calculate it:<br>
-<center><img src = "https://www.mydatamodels.com/wp-content/uploads/2020/10/5.-Precision-formula.png"></center><br><br>
+<center><img src = "https://www.mydatamodels.com/wp-content/uploads/2020/10/5.-Precision-formula.png"></center><br>
 
 ### Recall <br><br> 
 Recall, which can also be referred to as *sensitivity*, can tell us how well our model predicts true positives. This is how we calculate it:<br>
-<center><img src = "https://www.mydatamodels.com/wp-content/uploads/2020/10/3.-Sensitivity-formula.png"></center><br><br>
+<center><img src = "https://www.mydatamodels.com/wp-content/uploads/2020/10/3.-Sensitivity-formula.png"></center><br>
 
 ### F1 Score <br><br> 
 Lastly, F1 Score is the harmonic mean of precision and recall.This is how we calculate it:<br>
 <center><img src = "https://www.mydatamodels.com/wp-content/uploads/2020/10/6.-Precision-recall-1024x277.png"></center><br><br>
 
 # Conclusion 
-After using **SMOTE to oversample** our data, we had a model that wouldn't favour genuine transactions over fraudulent ones anymore and as a result, we'd have the following metrics:<br><br>
+When we work with a **machine learning model** we must always **know** for a fact **what it is that we're trying to get from that model**.<br><br>
 
-85.132 True Positives.<br>
-17 False Negatives.<br>
-0 False Positives.<br>
-85.440 True Negatives.<br><br>
+In this project, our goal is to **detect fraudulent transactions when they occur**, and the model who best performed that task was the **Ada Boost Classifier** with a recall of 91.87%, correctly detecting 147 fraudulent transactions out of 160. However, it is also important to note that the Ada Boost classifier had the biggest amount of false positives, that is, **1321 genuine transactions were mistakenly labeled as fraud, that's 1.54% of all genuine transactions**.<br><br>
 
-We've also achieved:<br>
-Accuracy: 99.99%;<br>
-Precision: 99.98%;<br>
-Recall: 100%;<br>
-F1 Score: 99.99%.<br><br>
-All great metrics, which indicates that our model has learned and it's now capable of identifying credit card frauds efficiently.
+A genuine purchase being incorrectly identified as a fraud could be a problem.<br><br>
+
+In this scenario it is necessary to understand the business and make a few questions such as:<br><br>
+
+
+- how cheap would a false positive be?<br><br>
+
+- Would we keep the Ada Boost Classifier with the best performance in detecting frauds, while also detecting a lot of false positives or should we use the Random Forest Classifier, who also performed pretty well identifiying frauds (82.50% recall) and reduced the number of false positives (0.02% of genuine transactions flagged as fraud). But that would also imply in a larger number of fraudsters getting away with it and customers being mistakenly charged...<br><br>
+
+These questions and a deeper understading of how the business work and how we want to approach the solution for a problem using machine learning are fundamental for a decision making process to choose whether or not if we're willing to deal with a larger number of false positives to detect the largest amount of frauds as possible.
+
 
 ----
 
 # Kaggle
 
-I've also uploaded this *notebook* to Kaggle, where plotly graphics are interactive. If you wish to see it, please <a href = "https://www.kaggle.com/code/lusfernandotorres/99-98-f1-score-credit-card-fraud-detection">click here</a>.
+I've also uploaded this *notebook* to Kaggle, where plotly graphics are interactive. If you wish to see it, please <a href = "https://www.kaggle.com/code/lusfernandotorres/91-87-recall-with-ada-boost-cc-fraud-detection/notebook">click here</a>.
 
 # Author
 **Luís Fernando Torres**
