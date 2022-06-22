@@ -43,7 +43,7 @@ Precision tells us how frequently our model correctly predicts positives. This i
 <center><img src = "https://www.mydatamodels.com/wp-content/uploads/2020/10/5.-Precision-formula.png"></center><br>
 
 ### Recall <br><br> 
-Recall, which can also be referred to as *sensitivity*, can tell us how well our model predicts true positives. This is how we calculate it:<br>
+Recall, which can also be referred to as *sensitivity*, can tell us how well our model predicts the class that we want to predict. This is how we calculate it:<br>
 <center><img src = "https://www.mydatamodels.com/wp-content/uploads/2020/10/3.-Sensitivity-formula.png"></center><br>
 
 ### F1 Score <br><br> 
