@@ -35,7 +35,7 @@ One of those evaluation metrics is the **confusion matrix** which is a summary o
 Beyond the confusion matrix, we also have some other relevant metrics. They are:<br><br>  
 
 ### Accuracy <br><br> 
-Accuracy simply tell us the propotion of correct predictions. This is how we calculate it:<br>
+Accuracy simply tells us the proportion of correct predictions. This is how we calculate it:<br>
 <center><img src = "https://www.mydatamodels.com/wp-content/uploads/2020/10/2.-Accuracy-formula-machine-learning-algorithms.png"></center><br>
 
 ### Precision <br><br> 
