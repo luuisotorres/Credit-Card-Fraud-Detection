@@ -9,7 +9,7 @@
 
 # Introduction
 
-Everyday **billions** of credit card transactions are made all over the world. Considering the widespread use of smartphones and the Internet throughout the earth, more and more people are using their credit cards to make purchases online, making payments through apps,etc...<br><br>
+Every day, **billions** of credit card transactions are made all over the world. Considering the widespread use of smartphones and the Internet throughout the earth, more and more people are using their credit cards to make purchases online, making payments through apps,etc...<br><br>
 In a scenario such as this one, it is **extremely** important that credit card companies are able to easily recognize when a transaction is a result of a fraud or a genuine purchase, avoiding that customers end up being charged for items they did not acquire.<br><br>
 In this project, I used the **scikit-learn** library to develop a prediction model that is able to learn and detect when a transaction is a fraud or a genuine purchase. I tested four different classification algorithms, **Decision Tree**, **Random Forest**, **Ada Boost Classifier** and **Gradient Boosting** to identify which one of them would achieve the best results with our dataset.
 
