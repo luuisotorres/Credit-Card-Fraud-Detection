@@ -51,9 +51,9 @@ Lastly, F1 Score is the harmonic mean of precision and recall.This is how we cal
 <center><img src = "https://www.mydatamodels.com/wp-content/uploads/2020/10/6.-Precision-recall-1024x277.png"></center><br><br>
 
 # Conclusion 
-When we work with a **machine learning model** we must always **know** for a fact **what it is that we're trying to get from that model**.<br><br>
+When we work with a **machine learning model**, we must always **know** for a fact **what it is that we're trying to get from that model**.<br><br>
 
-In this project, our goal is to **detect fraudulent transactions when they occur**, and the model who best performed that task was the **Ada Boost Classifier** with a recall of 91.87%, correctly detecting 147 fraudulent transactions out of 160. However, it is also important to note that the Ada Boost classifier had the biggest amount of false positives, that is, **1321 genuine transactions were mistakenly labeled as fraud, that's 1.54% of all genuine transactions**.<br><br>
+In this project, our goal is to **detect fraudulent transactions when they occur**, and the model who best performed that task was the **Ada Boost Classifier** with a recall of 91.87%, correctly detecting 147 fraudulent transactions out of 160. However, it is also important to note that the Ada Boost classifier had the biggest number of false positives, that is, **1321 genuine transactions were mistakenly labeled as fraud, that's 1.54% of all genuine transactions**.<br><br>
 
 A genuine purchase being incorrectly identified as a fraud could be a problem.<br><br>
 
@@ -62,7 +62,7 @@ In this scenario it is necessary to understand the business and make a few quest
 
 - how cheap would a false positive be?<br><br>
 
-- Would we keep the Ada Boost Classifier with the best performance in detecting frauds, while also detecting a lot of false positives or should we use the Random Forest Classifier, who also performed pretty well identifiying frauds (82.50% recall) and reduced the number of false positives (0.02% of genuine transactions flagged as fraud). But that would also imply in a larger number of fraudsters getting away with it and customers being mistakenly charged...<br><br>
+- Would we keep the Ada Boost Classifier with the best performance in detecting frauds, while also detecting a lot of false positives or should we use the Random Forest Classifier, who also performed pretty well identified frauds (82.50% recall) and reduced the number of false positives (0.02% of genuine transactions flagged as fraud). But that would also imply in a larger number of fraudsters getting away with it and customers being mistakenly charged...<br><br>
 
 These questions and a deeper understading of how the business works and how we want to approach solving a problem using machine learning are fundamental for a decision-making process to choose whether or not if we're willing to deal with a larger number of false positives to detect the largest amount of frauds as possible.
 
